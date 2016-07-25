@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-app.use( bodyParser.urlencoded( { extended: false } ) );
+app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use(expressValidator([]));
 app.use( bodyParser.json() );
 app.use( passport.initialize() );
@@ -26,4 +26,4 @@ require('./app/routes/router.js')(app,passport);
 
 app.listen(80);
 
-console.log('listening to 80');
+console.log('listening to 80'); 

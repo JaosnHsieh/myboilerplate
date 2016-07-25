@@ -14,18 +14,16 @@
 <body>
  
     <div class="container">
-          {{#if displayName}}
-              Hi , {{{displayName}}}
-          {{/if}}
+         
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-
+           
           {{#if displayName}}
-            
             <li role="presentation" {{{homeClass}}}><a href="/">Home</a></li>
-            <li role="presentation" {{{myinfoClass}}}><a href="/myinfo">Profile</a></li>
             <li role="presentation"><a href="/logout">Logout</a></li>
+            <li role="presentation" {{{myinfoClass}}}><a href="/myinfo"><i id="nameTag" class="fa fa-user" aria-hidden="true"> {{{displayName}}}</i></a></li>
+
             </ul>        
 
           {{else}}
@@ -54,4 +52,6 @@
 
   
 </body>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="js/myjs.js"></script>
 </html>
